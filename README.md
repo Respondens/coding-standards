@@ -1,5 +1,7 @@
 # Coding standards
 
+This document is meant as a base for all languages. However, for CSS & Javascript we use the [Trello CSS Style Guide](https://github.com/trello/trellisheets/blob/master/styleguide.md) and the [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) respectively. Therefor, most examples are in php / mysql.
+
 - [Principles](#principles)
 	- [Calmth](#calmth)
 	- [Consistency](#consistency)
