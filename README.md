@@ -294,17 +294,43 @@ FROM `table`
 JOIN `other`
 ON `other`.`id` = `table`.`fk`
 WHERE `column` = 'foo'
-OR `column` = 'bar';
+OR `column` = 'bar'
+ORDER BY `fk` DESC, `column` DESC;
 
 -- good
-SELECT *
-  FROM `table`
-  JOIN `other`
-    ON `other`.`id` = `table`.`fk`
- WHERE `column` = 'foo'
-    OR `column` = 'bar'
+    SELECT *
+      FROM `table`
+      JOIN `other`
+        ON `other`.`id` = `table`.`fk`
+     WHERE `column` = 'foo'
+        OR `column` = 'bar'
+  ORDER BY `fk` DESC,
+           `column` DESC
 ;
 ```
+
+To prevent conflicts with long statements, indent the beginning with 4 spaces (`····SELECT`). This makes sure there's enough space for longer statements.
+
+Some edge cases appear in `INSERT`-statements:
+
+``` sql
+-- bad
+INSERT INTO `table`
+           (`column`)
+    VALUES ('foo')
+ON DUPLICATE KEY
+    UPDATE `column` = 'bar'
+
+-- good
+    INSERT
+      INTO `table`
+       SET `column` = 'foo'
+        ON DUPLICATE KEY
+    UPDATE `column` = 'bar'
+;
+```
+
+*Note:* `SET` is prefered over `VALUES()` as it is similar to `UPDATE`-statements, but choose what fits best.
 
 ### Tabs vs spaces
 
