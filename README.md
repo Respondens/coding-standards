@@ -24,6 +24,8 @@ This document is meant as a base for all languages. However, for CSS & Javascrip
 	- [Spaces around syntax: calmth & consistency](#spaces-around-syntax-calmth--consistency)
 	- [Short array syntax: calmth & consistency](#short-array-syntax-calmth--consistency)
 	- [Quotes: consistency](#quotes-consistency)
+- [Doc Blocks](#doc-blocks)
+    - [When to use](#when-to-use)
 - [Minimal difference](#minimal-difference)
 	- [End of array](#end-of-array)
 	- [End of file](#end-of-file)
@@ -392,6 +394,13 @@ $options = [
 - Use double quotes for SQL statements as single quotes are so common inside SQL.
 - Use double quotes also for non-SQL strings with a lot of single quotes.
 - Prefer constants like `PHP_EOL` instead of a newline character inside double quotes.
+
+
+# Doc Blocks
+
+### When to use 
+- When something needs to be explained
+- When it helps type hinting. This will be deprecated as soon as we will switch to PHP7
 
 
 # Minimal difference
