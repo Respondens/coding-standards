@@ -25,7 +25,7 @@ This document is meant as a base for all languages. However, for CSS & Javascrip
 	- [Short array syntax: calmth & consistency](#short-array-syntax-calmth--consistency)
 	- [Quotes: consistency](#quotes-consistency)
 - [Doc Blocks](#doc-blocks)
-    - [When to use](#when-to-use)
+    - [When to use above functions](#when-to-use-above-functions)
 - [Minimal difference](#minimal-difference)
 	- [End of array](#end-of-array)
 	- [End of file](#end-of-file)
@@ -398,7 +398,7 @@ $options = [
 
 # Doc Blocks
 
-### When to use 
+### When to use above functions 
 - When something needs to be explained
 - When it helps type hinting. This will be deprecated as soon as we will switch to PHP7
 
